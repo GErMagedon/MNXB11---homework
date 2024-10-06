@@ -1,0 +1,131 @@
+Only in /home/gluzin: .apptainer
+Only in /home/gluzin: .bash_history
+diff -y /etc/skel/.bash_logout /home/gluzin/.bash_logout
+# ~/.bash_logout						# ~/.bash_logout
+
+Only in /home/gluzin: .bash_logout~
+diff -y /etc/skel/.bash_profile /home/gluzin/.bash_profile
+# .bash_profile							# .bash_profile
+							      >	export PATH="/projects/hep/fs10/mnxb11/bin:$PATH"
+
+# Get the aliases and functions					# Get the aliases and functions
+if [ -f ~/.bashrc ]; then					if [ -f ~/.bashrc ]; then
+	. ~/.bashrc							. ~/.bashrc
+fi								fi
+
+# User specific environment and startup programs		# User specific environment and startup programs
+Only in /home/gluzin: .bash_profile~
+diff -y /etc/skel/.bashrc /home/gluzin/.bashrc
+# .bashrc							# .bashrc
+
+# Source global definitions					# Source global definitions
+if [ -f /etc/bashrc ]; then					if [ -f /etc/bashrc ]; then
+	. /etc/bashrc							. /etc/bashrc
+fi								fi
+
+# User specific environment					# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]		if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then								then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"			    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi								fi
+export PATH							export PATH
+
+# Uncomment the following line if you don't like systemctl's 	# Uncomment the following line if you don't like systemctl's 
+# export SYSTEMD_PAGER=						# export SYSTEMD_PAGER=
+
+# User specific aliases and functions				# User specific aliases and functions
+if [ -d ~/.bashrc.d ]; then					if [ -d ~/.bashrc.d ]; then
+	for rc in ~/.bashrc.d/*; do					for rc in ~/.bashrc.d/*; do
+		if [ -f "$rc" ]; then						if [ -f "$rc" ]; then
+			. "$rc"								. "$rc"
+		fi								fi
+	done								done
+fi								fi
+
+unset rc							unset rc
+Only in /home/gluzin: .bashrc~
+Only in /home/gluzin: .cache
+Only in /home/gluzin: .config
+Only in /home/gluzin: Desktop
+Only in /home/gluzin: Documents
+Only in /home/gluzin: Downloads
+diff -y /etc/skel/.emacs /home/gluzin/.emacs
+;; .emacs							;; .emacs
+
+(custom-set-variables						(custom-set-variables
+ ;; uncomment to always end a file with a newline		 ;; uncomment to always end a file with a newline
+ ;'(require-final-newline t)					 ;'(require-final-newline t)
+ ;; uncomment to disable loading of "default.el" at startup	 ;; uncomment to disable loading of "default.el" at startup
+ ;'(inhibit-default-init t)					 ;'(inhibit-default-init t)
+ ;; default to unified diffs					 ;; default to unified diffs
+ '(diff-switches "-u"))						 '(diff-switches "-u"))
+
+;;; uncomment for CJK utf-8 support for non-Asian users		;;; uncomment for CJK utf-8 support for non-Asian users
+;; (require 'un-define)						;; (require 'un-define)
+Only in /home/gluzin: .emacs~
+Only in /home/gluzin: git
+Only in /home/gluzin: .gitconfig
+Only in /home/gluzin: home
+diff -y /etc/skel/.kshrc /home/gluzin/.kshrc
+# .kshrc							# .kshrc
+
+# Source global definitions					# Source global definitions
+if [ -f /etc/kshrc ]; then					if [ -f /etc/kshrc ]; then
+	. /etc/kshrc							. /etc/kshrc
+fi								fi
+
+# use emacs editing mode by default				# use emacs editing mode by default
+set -o emacs							set -o emacs
+
+# User specific aliases and functions				# User specific aliases and functions
+
+Only in /home/gluzin: .kshrc~
+Only in /home/gluzin: .lesshst
+Only in /home/gluzin: .lhpc
+Only in /home/gluzin: .local
+Common subdirectories: /etc/skel/.mozilla and /home/gluzin/.mozilla
+Only in /home/gluzin: Music
+Only in /home/gluzin: Pictures
+Only in /home/gluzin: .pki
+Only in /home/gluzin: Public
+Only in /home/gluzin: .root_hist
+Only in /home/gluzin: .ssh
+Only in /home/gluzin: Templates
+Only in /home/gluzin: Videos
+Only in /home/gluzin: .vscode
+diff -y /etc/skel/.zshrc /home/gluzin/.zshrc
+#								#
+# .zshrc is sourced in interactive shells.			# .zshrc is sourced in interactive shells.
+# It should contain commands to set up aliases,			# It should contain commands to set up aliases,
+# functions, options, key bindings, etc.			# functions, options, key bindings, etc.
+#								#
+
+autoload -U compinit						autoload -U compinit
+compinit							compinit
+
+#allow tab completion in the middle of a word			#allow tab completion in the middle of a word
+setopt COMPLETE_IN_WORD						setopt COMPLETE_IN_WORD
+
+## keep background processes at full speed			## keep background processes at full speed
+#setopt NOBGNICE						#setopt NOBGNICE
+## restart running processes on exit				## restart running processes on exit
+#setopt HUP							#setopt HUP
+
+## history							## history
+#setopt APPEND_HISTORY						#setopt APPEND_HISTORY
+## for sharing history between zsh processes			## for sharing history between zsh processes
+#setopt INC_APPEND_HISTORY					#setopt INC_APPEND_HISTORY
+#setopt SHARE_HISTORY						#setopt SHARE_HISTORY
+
+## never ever beep ever						## never ever beep ever
+#setopt NO_BEEP							#setopt NO_BEEP
+
+## automatically decide when to page a list of completions	## automatically decide when to page a list of completions
+#LISTMAX=0							#LISTMAX=0
+
+## disable mail checking					## disable mail checking
+#MAILCHECK=0							#MAILCHECK=0
+
+# autoload -U colors						# autoload -U colors
+#colors								#colors
+Only in /home/gluzin: .zshrc~
