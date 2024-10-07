@@ -160,3 +160,4 @@ STARTLINE=$(( $STARTLINE + 1 ))
 # - Convert format to spaces instead of commas (sed)
 log "Perform cleanup in one line, result in $CLEANER_BAREDATAFILENAME"
 tail -n +$STARTLINE $CLEANER_ORIGINALFILENAME | cut -d';' -f 1,2,3,4,5 | sed 's/;/,/g' > $CLEANER_BAREDATAFILENAME
+#this comment added to do a proper final submission
