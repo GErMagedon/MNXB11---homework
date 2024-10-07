@@ -1,0 +1,6 @@
+[2024-10-07T13:21:03+02:00 Cleaner]: Copying input file /home/gluzin/git/MNXB11-BASH/casestudy/data/smhi-opendata_1_52240_20200905_163726.csv to original_smhi-opendata_1_52240_20200905_163726.csv
+[2024-10-07T13:22:14+02:00 Cleaner]: Copying input file ../data/smhi-opendata_1_52240_20200905_163726.csv to original_smhi-opendata_1_52240_20200905_163726.csv
+[2024-10-07T13:25:05+02:00 Cleaner]: Copying input file /home/gluzin/git/MNXB11-BASH/casestudy/data/smhi-opendata_1_52230_20210906_212532.csv to original_smhi-opendata_1_52230_20210906_212532.csv
+[2024-10-07T13:25:05+02:00 Cleaner]: Finding the first line containing 'Datum'...
+[2024-10-07T13:25:05+02:00 Cleaner]: Found line 10
+[2024-10-07T13:25:05+02:00 Cleaner]: Perform cleanup in one line, result in baredata_smhi-opendata_1_52230_20210906_212532.csv
