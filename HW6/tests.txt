@@ -1,0 +1,14 @@
+[gluzin@cosmos3 HW6]$ ./main MNXB11
+[gluzin@cosmos3 HW6]$ ./main MNXB11 12345
+Wrong!
+[gluzin@cosmos3 HW6]$ ./main MNXB11 23552
+Correct!
+[gluzin@cosmos3 HW6]$ ./main 23552 MNXB11
+Wrong!
+[gluzin@cosmos3 HW6]$ ./main MNXB11 11776 12345
+[gluzin@cosmos3 HW6]$ mv main mytest
+[gluzin@cosmos3 HW6]$ ./mytest MNXB11 23552
+Wrong!
+[gluzin@cosmos3 HW6]$ mv mytest name
+[gluzin@cosmos3 HW6]$ ./name MNXB11 23552
+Correct!
