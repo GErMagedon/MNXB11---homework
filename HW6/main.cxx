@@ -1,21 +1,24 @@
 #include <iostream>
 #include <string>
-int main(int var0, char *var1[]) {
-  if (var0 == 3) {
-    std::string var2{var1[0]};
-    auto var3{*(var1[1])};
-    auto var4{var2.size()};
-    auto var5{std::atoi(var1[2])};
-    auto var6{0};
-    auto var7{0};
-    std::string var8{var1[1]};
-    while (true) {
-      var6 += var8[var7++];
-      if (var7 >= static_cast<int>(var8.size())) {
+int main(int argc, char *argv[]) {
+  bool correct_num_arg{argc==3};
+  if (correct_num_arg) {
+    std::string program_name{argv[0]};
+    char first_letter_of_1st_argument{*(argv[1])}; // *(argv[1])  would retrieve the first character of the 2nd word in input
+    size_t program_name_lenght{program_name.size()};
+    int second_argument{std::atoi(argv[2])}; // atoi converts second input into integer
+    auto ASCII_sum{0};
+    int counter{0}; //this variable works as an artificial counter for the while loop
+     
+    std::string first_argument{argv[1]}; // argv[1] would point to the string (to the 2nd word in input)
+    
+    while (true) {    // this loop adds up all of the ASCII values of symbols in a first function argument 
+      ASCII_sum += first_argument[counter++];
+      if (counter >= static_cast<int>(first_argument.size())) {
         break;
       }
     }
-    if ((var6 ^ var3 * 3) << (var4 & 0x1f) == var5) {
+    if ((ASCII_sum ^ first_letter_of_1st_argument * 3) << (program_name_lenght & 0x1f) == second_argument) {
       std::cout << "Correct!" << std::endl;
     } else {
       std::cout << "Wrong!" << std::endl;
